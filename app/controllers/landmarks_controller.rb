@@ -26,10 +26,8 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks/:id/edit' do
-    binding.pry
     @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
-    binding.pry
     redirect to "/landmarks/#{@landmark.id}"
   end
 

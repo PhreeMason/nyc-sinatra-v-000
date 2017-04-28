@@ -4,3 +4,8 @@
       <h2><%=item.name%></h2>
   <% end %>
 <% end %>
+ <% if !@figure.landmarks.blank? %>
+   <% for item in @figure.landmarks %>
+     <h2><%=item.name%></h2>
+   <% end %>
+ <% end %>

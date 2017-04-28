@@ -37,18 +37,14 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id/edit' do
-    binding.pry
     @figure = Figure.find(params[:id])
-    binding.pry
     @figure.update(params[:figure])
     if !params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
     end
-    binding.pry
     if !params[:landmark][:name].empty?
      @figure.landmarks << Landmark.create(params[:landmark])
    end
-   binding.pry
    @figure.save
    redirect to "/figures/#{@figure.id}"
   end

@@ -1,0 +1,8 @@
+<h1>LANDMARKS</h1>
+<% if !@landmarks.blank? %>
+  <% for item in @landmarks %>
+    <h2><a href="/landmarks/<%=item.id%>"><%=item.name%></a></h2>
+  <% end %>
+<% else %>
+  No landmarks yet
+<% end %>

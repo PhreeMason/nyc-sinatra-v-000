@@ -1,0 +1,8 @@
+<h1>FIGURES</h1>
+<% if !@figures.blank? %>
+  <% for item in @figures %>
+    <h2><a href="/figures/<%=item.id%>"><%=item.name%></a></h2>
+  <% end %>
+<% else %>
+  No figures yet
+<% end %>

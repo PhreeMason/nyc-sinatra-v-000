@@ -1,0 +1,6 @@
+<h1><%=@figure.name%></h1>
+<% if !@figure.titles.blank? %>
+  <% for item in @figure.titles %>
+      <h2><%=item.name%></h2>
+  <% end %>
+<% end %>
